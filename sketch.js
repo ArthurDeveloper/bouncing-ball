@@ -51,13 +51,6 @@ function draw() {
 	}
 
 	circle(ball.x, ball.y, 2*ball.radius);
-	stroke(255, 0, 0);
-	line(
-		ball.x, 
-		ball.y, 
-		ball.x + Math.cos(ball.angleOfMovement) * 100,
-		ball.y + Math.sin(ball.angleOfMovement) * 100
-	);
 }
 
 function windowResized() {
