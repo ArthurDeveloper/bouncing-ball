@@ -1,4 +1,4 @@
-const G = 150;
+const G = 700;
 
 const ball = {
 	x: 0,
@@ -9,11 +9,10 @@ const ball = {
 	},
 	acceleration: {
 		x: 0,
-		y: 0,
+		y: G,
 	},
 	radius: 40,
 	update(dt) {
-		this.acceleration.y += G * dt;
 		this.speed.x += this.acceleration.x * dt;
 		this.speed.y += this.acceleration.y * dt;
 
