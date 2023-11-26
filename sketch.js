@@ -8,7 +8,7 @@ const ball = {
 		y: 0,
 	},
 	acceleration: {
-		x: 0,
+		x: 150,
 		y: G,
 	},
 	radius: 40,
@@ -20,7 +20,7 @@ const ball = {
 		this.y += this.speed.y * dt;
 	},
 	bounce() {
-		this.speed.x = -this.speed.x;
+		this.speed.x = this.speed.x;
 		this.speed.y = -this.speed.y;
 	}
 }
