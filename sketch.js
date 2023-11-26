@@ -20,6 +20,10 @@ const ball = {
 		this.x += this.speed.x * dt;
 		this.y += this.speed.y * dt;
 	},
+	bounce() {
+		this.speed.x = -this.speed.x;
+		this.speed.y = -this.speed.y;
+	}
 }
 
 function setup() {
@@ -29,7 +33,12 @@ function setup() {
 function draw() {
 	background(0);
 	fill('#fff');
+
 	ball.update(deltaTime / 1000);
+	if (ball.y + 2*ball.radius > windowHeight) {
+		ball.bounce();
+	}
+
 	circle(ball.x, ball.y, 2*ball.radius);
 }
 
